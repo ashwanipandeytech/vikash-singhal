@@ -1,0 +1,429 @@
+
+:root {
+  --warning-color: #f58327;
+  --black-color: #0d0d0d;
+  --font-satoshi: "Satoshi", "Satoshi Placeholder", sans-serif;
+}
+
+body {
+  font-family: "Unbounded", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: #000;
+  color: #fff;
+}
+
+.f-12 {font-size: 12px;}
+.f-11 {font-size: 11px;}
+
+.bg-warning {
+  background-color: var(--warning-color) !important;
+}
+.text-warning {
+  color: var(--warning-color) !important;
+}
+.btn-lg{
+  padding: 15px 50px;
+}
+
+.outline-btn{
+  border: 1px solid rgb(248, 248, 245);
+  color: #fff;
+  padding: 10px 20px;
+  &:hover{
+    background-color: var(--warning-color);
+    color: var(--black-color);
+  }
+}
+
+section{
+  padding-inline: 40px;
+  padding-top: 150px;
+  .section-title{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: -1.8px;
+    max-width: 500px;
+    margin-inline: auto;
+  }
+  .section-info{
+    background: #d4c0c042;
+    color: var(--warning-color);
+    font-family: var(--font-satoshi);
+    font-weight: 600;
+  }
+}
+
+header {
+  .navbar{
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .container-fluid {
+    padding: 10px 40px;
+    .navbar-nav {
+      border: 1px solid rgba(255, 255, 255, .15);
+      padding: 10px;
+    }
+    .btn {
+      padding: 12px 31px;
+      color: var(--black-color);
+    }
+  }
+}
+
+.hero-content{
+  max-width: 1050px;
+  h1{
+    font-size: 60px;
+    line-height: .9em;
+    letter-spacing: -3px;
+    font-weight: 400;
+  }
+  p{
+    color: #FFFFFFCC;
+    max-width: 850px;
+  }
+  span{
+    transform: rotate(2deg);
+  }
+  .voiceImg{
+    width: 80px;
+    height: 80px;
+    img {
+      transform: rotate(-16deg);
+    }
+  }
+}
+
+.banner-section{
+  padding-top: 200px;
+}
+
+.service-section{
+  .card-group{
+    margin-top: 60px;    
+    color: #fff;
+    .card-detail{
+      background-color: #1f1d1d;
+      padding: 20px;
+      .service-icon{
+        background-color: #ffffff0d;
+        border-radius: 20px;
+        height: 56px;
+        width: 56px;
+      }
+      p{
+        opacity: 0.6;
+        margin-top: 70px;
+        line-height: 1.6em;
+        font-family: "Satoshi", "Satoshi Placeholder", sans-serif;
+        max-width: 80%;
+        font-size: 15px;
+      }
+      .con-svg{
+        svg{width: 36px!important;}
+      }
+    }
+  }
+}
+
+.brands-section{
+  margin-bottom: 100px;
+  .brand-carousel{
+    border: 1px solid rgba(255, 255, 255, .15);
+    margin-top: 30px;
+    overflow: hidden;
+    .brand-box{
+      border-radius: 30px;
+      background-color: #ffffff1a;
+      padding: 14px 28px;
+      width: 186px;
+      height: 98px;
+      img{
+        max-height: 71px;
+        max-width: 130px;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.statistics-group{
+  img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    -webkit-filter: contrast(2) grayscale(.48);
+    filter: contrast(2) grayscale(.48);
+    opacity: .6;
+    height: 700px;
+  }
+  .overlay{
+    background: radial-gradient(45.1% 44.7% at 52.6% 42.8%, #d94c00 0%, rgb(0, 0, 0) 100%);
+    bottom: 0;
+    height: 100%;
+    left: calc(50.00000000000002% - 100% / 2);
+    mix-blend-mode: multiply;
+    opacity: .91;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+  }
+  .position-absolute{
+    padding: 0px 20px 50px;
+  }
+  .value-box{
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--warning-color);
+    background-color: #1f1d1d;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.05);
+    .icon{
+      border: 1px solid var(--warning-color);
+      border-radius: 20px;
+      width: 60px;
+      height: 60px;
+      svg{
+        height: 42px!important;
+        width: 42px!important;
+      }
+    }
+    p{
+      opacity: 0.6;
+      line-height: 1.6em;
+      font-family: var(--font-satoshi);
+      font-size: 15px;
+    }
+  }
+  .varient{
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.1);
+    .icon{width: 20px;height: 20px;}
+    .varient-text{font-family: var(--font-satoshi);}
+  }
+  .stats-group{
+    div:nth-child(odd){
+      transform: perspective(1200px) translateY(17.2683px);
+    }
+    .stats{
+      width: 200px;
+      height: 200px;
+      backdrop-filter: blur(5px);
+      background-color: rgba(255, 255, 255, 0.1);
+      .number{
+        font-size: 40px;
+        line-height: 40px;
+      }
+      .info-txt{
+        font-family: var(--font-satoshi);
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+
+/* Testimonial start */
+  .testimonial{
+    svg{
+      /* outline: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      transform: translateX(-50%);  
+      left: 50%;
+      opacity: .23;
+      position: absolute;
+      top: 0;
+      transform: translate(-50%);
+      white-space: pre;
+      width: 100%;
+      z-index: 0; */
+    }
+    /* .foreignObject{
+      transform: scale(1, 1);
+    } */
+    .title{
+      font-size: 67px;
+      opacity: 0.23;
+    }
+
+    .testimonial-box{
+      width: 610px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(5px);
+      background-color: rgba(13, 13, 13, 0.1);
+      svg{
+        width: 10px;
+        fill: var(--warning-color);
+        color: var(--warning-color);
+      }
+      .feedback{
+        font-size: 18px;
+        opacity: 0.7;
+        font-family: var(--font-satoshi);
+        line-height: 1.5em;
+      }
+      .user-info{
+        border-top: 1px solid #ffffff52;
+        padding-top: 20px;
+      }
+      h5{
+        font-size: 14px;
+      }
+    }
+    .video-container{
+      background-color:rgba(255, 255, 255, .1);
+      border-radius: 30px;
+      padding: 10px;
+      margin-top: 30px;
+      cursor: pointer;
+      img{
+        width: 100%;
+        border-radius: 30px;
+        object-fit: cover;
+      }
+      h5{font-size: 14px;}
+      .youtube-icon{
+        width: 68px;
+        height: 48px;
+      }
+      &:hover{
+        path:nth-child(1){
+          fill: red;
+        }
+      }
+    }
+  }
+
+/* Testimonial end */
+
+/* Pricing section start */
+  .pricing-section{
+    .plan-info-box{
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 30px;
+      padding: 30px 20px 20px;
+      .plan-info{
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        font-weight: 400;
+        background: #d4c0c042;
+        width: fit-content;
+      }
+      .price-sign{
+        font-size: 15px;
+      }
+      .price{
+        font-size: 50px;
+        color: var(--warning-color);
+      }
+      .plan-term, .info-text{
+        font-size: 16px;
+        font-family:var(--font-satoshi);
+      }
+      .check-sign{
+        width: 16px;
+      }
+    }
+  }
+/* Pricing section end */
+
+/* faq start */
+  .faq-section{
+    .accordion{
+      max-width: 1000px;
+      .accordion-item{
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(13, 13, 13, 0.1);
+        background-color: rgba(255, 255, 255, 0.08);
+        border-radius: 30px;
+        padding: 20px;
+        color: #fff;
+        .accordion-body{
+          max-width: 800px;
+          margin: auto;
+          color: #fff;
+          opacity: 0.7;
+          font-family: var(--font-satoshi);
+        }
+      }
+    }
+    .accordion-button:not(.collapsed) {
+      color: #fff;
+      background-color: transparent;
+      box-shadow: none;
+      svg{
+        transform: rotate(180deg);
+      }
+    }
+    .accordion-button:focus{
+      box-shadow: none;
+    }
+    .accordian-icon {
+      width: 34px;
+      height: 34px;
+      background-color: var(--warning-color);
+      border-radius: 10px;
+      display: inline-block;
+      svg{
+        width: 15px!important;
+        height: 15px!important;
+      }
+    }
+      
+    .accordion-button::after {
+      display: none;
+    }
+  }
+/* faq end */
+
+/* About section start */
+  .about-section{
+    .row{
+      width: 80%;
+    }
+    .user-name{
+      font-size: 50px;
+      line-height: 46px;
+      font-weight: bold;
+      span{
+        color: var(--warning-color);
+      }
+    }
+    .about-subtitle{
+      font-size: 30px;
+      font-family: var(--font-satoshi);
+      line-height: 1.3em;
+      color: rgba(255, 255, 255, 0.5);
+    }
+    .about-info{
+      opacity: 0.6;
+      font-family: var(--font-satoshi);
+    }
+    .varient{
+      backdrop-filter: blur(5px);
+      background-color: rgba(255, 255, 255, 0.1);
+      .icon{width: 20px;height: 20px;}
+      .varient-text{font-family: var(--font-satoshi);}
+    }
+    .brand-box{
+      width: 193px;
+      height: 60px;
+      padding: 14px 28px;
+      border-radius: 20px;
+      background-color: #ffffff1a;
+      img{
+        height: 32px;
+      }
+    }
+  }
+/* About section end */
+
+@media screen and (max-width:575px) {
+  .hero-content{
+    h1{font-size: 30px;line-height: normal;}
+  }
+}
