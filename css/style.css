@@ -23,6 +23,7 @@ body {
   opacity: 0.5;
   font-size: 14px;
   font-family: var(--font-satoshi);
+  
 }
 
 .bg-warning {
@@ -50,10 +51,10 @@ section{
   padding-top: 150px;
   .section-title{
     color: #fff;
-    line-height: 1.1em;
+    line-height: normal;
     font-size: 40px;
     font-weight: 400;
-    letter-spacing: -1.8px;
+    letter-spacing: -1.4px;
     max-width: 500px;
     margin-inline: auto;
   }
@@ -69,6 +70,11 @@ header {
   .navbar{
     backdrop-filter: blur(5px);
     background-color: rgba(0, 0, 0, 0);
+  }
+  .navbar-toggler{
+    line{
+      color: #fff;
+    }
   }
   .container-fluid {
     padding: 10px 40px;
@@ -129,6 +135,7 @@ header {
   /* background: url('../images/yellow-bg.png') no-repeat center / cover; */
   background: rgb(0,0,0);
   background: linear-gradient(0deg, rgba(0,0,0,1) 2%, rgba(245,131,39,1) 100%);
+  box-shadow: 0px -4px 10px rgb(225 120 36);
 }
 
 .service-section{
@@ -160,7 +167,9 @@ header {
 }
 
 .brands-section{
-  margin-bottom: 100px;
+  /* @media screen and (min-width:991px) {
+    margin-bottom: 100px;
+  } */
   .brand-carousel{
     border: 1px solid rgba(255, 255, 255, .15);
     margin-top: 30px;
@@ -185,10 +194,7 @@ header {
     width: 100%;
     object-fit: cover;
     object-position: center;
-    -webkit-filter: contrast(2) redscale(.48);
-    filter: contrast(2) redscale(.48);
-    opacity: .6;
-    height: 700px;
+    height: 750px;
   }
   .overlay{
     background: radial-gradient(45.1% 44.7% at 52.6% 42.8%, #d94c00 0%, rgb(0, 0, 0) 100%);
@@ -257,32 +263,16 @@ header {
 
 /* Testimonial start */
   .testimonial{
-    svg{
-      /* outline: none;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      flex-shrink: 0;
-      transform: translateX(-50%);  
-      left: 50%;
-      opacity: .23;
-      position: absolute;
-      top: 0;
-      transform: translate(-50%);
-      white-space: pre;
-      width: 100%;
-      z-index: 0; */
-    }
-    /* .foreignObject{
-      transform: scale(1, 1);
-    } */
+    overflow-x: hidden;
     .title{
-      font-size: 67px;
+      font-size: 100px;
       opacity: 0.23;
+      transform: scale(1.1);
+      text-transform: uppercase;
     }
 
     .testimonial-box{
-      width: 610px;
+      max-width: 610px;
       border: 1px solid rgba(255, 255, 255, 0.3);
       backdrop-filter: blur(5px);
       background-color: rgba(13, 13, 13, 0.1);
@@ -412,9 +402,11 @@ header {
 
 /* About section start */
   .about-section{
-    .row{
-      width: 80%;
-    }
+    /* .row{
+      @media screen and (min-width:768) {
+        width: 80%;
+      }
+    } */
     .user-name{
       font-size: 50px;
       line-height: 46px;
@@ -424,7 +416,7 @@ header {
       }
     }
     .about-subtitle{
-      font-size: 30px;
+      font-size: 22px;
       font-family: var(--font-satoshi);
       line-height: 1.3em;
       color: rgba(255, 255, 255, 0.5);
@@ -507,7 +499,8 @@ header {
       border-radius: 20px;
       background-color: rgba(187, 187, 187, 0.15);
       padding: 12px;
-      height: 60px;
+      height: 60px;      
+      color: rgb(153, 153, 153);
       &:focus{
         border: 1px solid var(--warning-color);
         background-color: rgba(187, 187, 187, 0.15);
@@ -558,6 +551,9 @@ header {
   .col-md-5{
     > div{
       gap: 73px;
+      @media screen and (max-width:575px) {
+        gap: 2px;
+      }
     }
   }
   .menu-section{
@@ -597,9 +593,6 @@ header {
         background-color: var(--warning-color);
         svg{
           transform: scale(1.2);
-          /* path{
-            fill: #000;
-          } */
         }
       }
     }
@@ -630,8 +623,48 @@ header {
 
 
 
-@media screen and (max-width:575px) {
+@media screen and (max-width:991px) {
   .hero-content{
     h1{font-size: 30px;line-height: normal;}
+  }
+  .form-title, .testimonial .title{
+    font-size: 40px!important;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width:768px) {
+  section{
+    padding-inline: 10px;
+    padding-top: 80px;
+  }
+  .section-title {
+    text-align: center;
+  }
+  .footer-section {
+    .form{
+      padding-inline: 10px;
+    }
+  }
+  .navbar-nav{
+    border-radius: 0!important;
+  }
+  header .container-fluid {
+    padding-inline: 20px;
+  }
+  .w-75 {
+    width: 100%!important;
+  }
+  .banner-section {
+    height: 290px;
+    marquee {
+      font-size: 60px;
+    }
+  }
+}
+
+@media screen and (min-width:991px) {
+  .position-lg-absolute{
+    position: absolute;
   }
 }
