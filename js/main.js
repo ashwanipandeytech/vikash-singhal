@@ -1,7 +1,7 @@
 $(document).ready(function () {
     // Initialize AOS (Animate On Scroll)
     AOS.init({
-      duration: 2000, // Animation duration
+      duration: 1000, // Animation duration
       once: false, // Trigger animation on each scroll
     });
 
