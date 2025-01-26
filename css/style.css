@@ -76,6 +76,19 @@ header {
     backdrop-filter: blur(5px);
     background-color: rgba(0, 0, 0, 0);
   }
+  /* .navbar-collapse, .collapsing{
+    width:300px;
+    position: fixed !important;
+    top:0;
+    left:-300px;
+    height:100%;
+    box-shadow:0 2px 8px rgba(0,0,0,0.2);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; 
+      &.show{
+          left:0;
+    }
+  } */
   .navbar-toggler{
     line{
       color: #fff;
@@ -176,7 +189,7 @@ header {
     margin-bottom: 100px;
   } */
   .brand-carousel{
-    border: 1px solid rgba(255, 255, 255, .15);
+    /* border: 1px solid rgba(255, 255, 255, .15); */
     margin-top: 30px;
     overflow: hidden;
     .brand-box{
@@ -191,6 +204,9 @@ header {
         object-fit: contain;
       }
     }
+  }
+  .slick-initialized .slick-slide:not(:last-child){
+    margin-right: 10px;
   }
 }
 
@@ -405,12 +421,17 @@ header {
         }
       }
     }
-    .accordion-button:not(.collapsed) {
-      color: #fff;
-      background-color: transparent;
-      box-shadow: none;
-      svg{
-        transform: rotate(180deg);
+    .accordion-button{
+      span:nth-child(1){
+        width: calc(100% - 40px);
+      }
+      &:not(.collapsed) {
+        color: #fff;
+        background-color: transparent;
+        box-shadow: none;
+        svg{
+          transform: rotate(180deg);
+        }
       }
     }
     .accordion-button:focus{
