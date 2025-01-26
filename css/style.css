@@ -4,6 +4,11 @@
   --black-color: #0d0d0d;
   --font-satoshi: "Satoshi", "Satoshi Placeholder", sans-serif;
 }
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 
 body {
   font-family: "Unbounded", serif;
@@ -318,6 +323,35 @@ header {
       }
     }
   }
+
+  .testimonial-slider {
+    position: relative;
+    overflow: hidden;
+    height: 600px; /* Adjust height as needed */
+  }
+  
+  .testimonial-slider .testimonial-box {
+    animation: slide 10s infinite;
+    flex-shrink: 0;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateY(0);
+    }
+    33% {
+      transform: translateY(-100%);
+    }
+    66% {
+      transform: translateY(-200%);
+    }
+    100% {
+      transform: translateY(-300%);
+    }
+  }
+  
 
 /* Testimonial end */
 
