@@ -323,11 +323,11 @@ header {
       }
     }
   }
-
+/* 
   .testimonial-slider {
     position: relative;
     overflow: hidden;
-    height: 600px; /* Adjust height as needed */
+    height: 600px; 
   }
   
   .testimonial-slider .testimonial-box {
@@ -335,9 +335,9 @@ header {
     flex-shrink: 0;
     width: 100%;
     transition: all 0.3s ease-in-out;
-  }
+  } */
   
-  @keyframes slide {
+  /* @keyframes slide {
     0% {
       transform: translateY(0);
     }
@@ -350,7 +350,7 @@ header {
     100% {
       transform: translateY(-300%);
     }
-  }
+  } */
   
 
 /* Testimonial end */
