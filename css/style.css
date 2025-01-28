@@ -413,6 +413,7 @@ header {
 
 /* faq start */
   .faq-section{
+    overflow: hidden;
     .accordion{
       max-width: 1000px;
       .accordion-item{
