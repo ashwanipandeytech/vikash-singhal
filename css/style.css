@@ -347,6 +347,29 @@ header {
         }
       }
     }
+    .bg-shade1{
+      background-color: var(--warning-color, #bf3313);
+      border-radius: 210px;
+      filter: blur(67px);
+      flex: none;
+      height: 148px;
+      left: calc(46.66666666666669% - 589px / 2);
+      overflow: hidden;
+      position: absolute;
+      top: -107px;
+      width: 589px;
+      will-change: var(--framer-will-change-override, transform);
+      z-index: 0;
+    }
+    .bg-shade{
+      background: radial-gradient(69.3% 75% at 50% 100%, var(--warning-color, #bf3313) 0%, rgba(0, 0, 0, 0) 100%);
+      transform: rotate(180deg);
+      height: 105px;
+      position: absolute;
+      top: 0;
+      width: 330px;
+      z-index: 1;
+    }
   }
 /* 
   .testimonial-slider {
@@ -645,6 +668,7 @@ header {
       transition: background-color 0.5s ease; 
       svg{
         width: 25px!Important;
+        height: 25px;
         margin: auto;
         transition: transform 0.4s ease;
       }
