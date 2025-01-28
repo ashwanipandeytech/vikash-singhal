@@ -294,6 +294,7 @@ header {
 /* Testimonial start */
   .testimonial{
     overflow-x: hidden;
+    overflow-y: hidden;
     .title{
       font-size: 100px;
       opacity: 0.23;
