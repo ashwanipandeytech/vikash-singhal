@@ -106,7 +106,7 @@ $(document).ready(function () {
     console.info('jsonData', jsonData); // Debugging: Check the JSON data
 
     // Send the data to the server using fetch
-    fetch('/formsubmission1.php', { // Use the correct path to your PHP file
+    fetch('/formsubmission.php', { // Use the correct path to your PHP file
         method: 'POST',
         headers: {
             'Content-Type': 'application/json', // Set the content type to JSON
@@ -165,7 +165,7 @@ document.getElementById('contactVForm2').addEventListener('submit', function (ev
   
 
   // Send the data to the server using fetch
-  fetch('/formsubmission1.php', { // Use the correct path to your PHP file
+  fetch('/formsubmission.php', { // Use the correct path to your PHP file
       method: 'POST',
       headers: {
           'Content-Type': 'application/json', // Set the content type to JSON
