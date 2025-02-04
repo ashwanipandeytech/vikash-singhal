@@ -1,4 +1,28 @@
 $(document).ready(function () {
+
+  const redirectTo = localStorage.getItem('redirectTo');
+
+  if (redirectTo) {
+      // If the item exists, perform an action
+      console.log('Visited from services link!');
+      var targetSection = $("#" + redirectTo);
+      var navHeight = $("nav").outerHeight();
+
+      $("html, body").animate(
+        {
+          scrollTop: targetSection.offset().top - navHeight,
+        },
+        500
+        
+      );
+      // Remove the localStorage item after 2 seconds
+      setTimeout(function() {
+        localStorage.removeItem('redirectTo');
+       // console.log('LocalStorage item removed after 2 seconds');
+    }, 500);  // 2000 milliseconds = 2 second
+  } else {
+      console.log('No visit data found.');
+  }
     // Initialize AOS (Animate On Scroll)
     AOS.init({
       duration: 1000, // Animation duration
@@ -21,6 +45,8 @@ $(document).ready(function () {
         500
       );
     });
+
+
 
     $(".brand-carousel").slick({
       slidesToShow: 3,
@@ -90,6 +116,20 @@ $(document).ready(function () {
 
 
   });
+
+  window.onload = function() {
+    // Check if the localStorage item exists
+    const redirectTo = localStorage.getItem('redirectTo');
+
+    if (redirectTo) {
+        // If the item exists, perform an action
+        console.log('Visited from services link!');
+        // Optionally, you can clear the localStorage after checking
+        // localStorage.removeItem('redirectTo');
+    } else {
+        console.log('No visit data found.');
+    }
+};
 
   document.getElementById('contactVForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent the default form submission
@@ -216,4 +256,21 @@ function resetEmail() {
   document.getElementById('inputTextarea').value = '';
   document.getElementById('inputEmail1').value = '';
  
+}
+
+function goToHome() {
+  // Set the local storage item
+  
+
+  // Redirect to the homepage
+  window.location.href = '/'; // This assumes the home page is at the root URL ("/")
+}
+
+function goToPage(value) {
+  // Set the local storage item
+  localStorage.setItem('redirectTo', value); // Adjust key and value as needed
+
+  // Redirect to the homepage
+ 
+  window.location.href = '/index'; // Adjust key and value as needed
 }

@@ -127,16 +127,16 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto rounded-pill" headerNav>
               <li class="nav-item px-3">
-                <a href="javascript:void(0)" class="nav-link text-white f-12 active scroll-link" data-target="home">HOME</a>
+                <a href="/" class="nav-link text-white f-12 active scroll-link" data-target="home">HOME</a>
               </li>
               <li class="nav-item px-3">
                 <a href="javascript:void(0)" class="nav-link text-white f-12 scroll-link" data-target="about">ABOUT</a>
               </li>
               <li class="nav-item px-3">
-                <a href="javascript:void(0)" class="nav-link text-white f-12 scroll-link" data-target="services">SERVICES</a>
+                <a href="javascript:void(0)" (onclick)="goToHome()" class="nav-link text-white f-12 scroll-link" data-target="services">SERVICES</a>
               </li>
               <li class="nav-item px-3">
-                <a href="javascript:void(0)" class="nav-link text-white f-12 scroll-link" data-target="contact">CONTACT</a>
+                <a href="javascript:void(0)" (onclick)="goService()" class="nav-link text-white f-12 scroll-link" data-target="contact">CONTACT</a>
               </li>
             </ul>
             <button class="btn bg-warning rounded-pill f-12 mt-2 mt-md-0 invisible" type="button">TEMPLATE</button>
