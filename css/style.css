@@ -26,6 +26,7 @@ body {
 .bg-warning {background-color: var(--warning-color) !important;}
 .text-warning {color: var(--warning-color) !important;}
 .btn-lg{padding: 15px 50px;}
+.cursor-pointer{cursor: pointer;}
 
 ::placeholder {
   color: rgb(153, 153, 153)!important;
