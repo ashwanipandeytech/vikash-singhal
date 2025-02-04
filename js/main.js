@@ -266,11 +266,3 @@ function goToHome() {
   window.location.href = '/'; // This assumes the home page is at the root URL ("/")
 }
 
-function goToPage(value) {
-  // Set the local storage item
-  localStorage.setItem('redirectTo', value); // Adjust key and value as needed
-
-  // Redirect to the homepage
- 
-  window.location.href = '/index'; // Adjust key and value as needed
-}
