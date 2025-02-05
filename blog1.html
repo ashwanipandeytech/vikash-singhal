@@ -333,10 +333,10 @@
               <div class="menu-section">
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item text-warning title mb-1">Services</li>
-                  <li class="list-group-item"><a href="javascript:void(0)"  data-target="Real-Estate-Lead-Generation">Real Estate Lead Generation</a></li>
-                  <li class="list-group-item"><a href="javascript:void(0)"  data-target="Website-Development">Website Development</a></li>
-                  <li class="list-group-item"><a href="javascript:void(0)"  data-target="Social-Media-Marketing">Social Media Marketing</a></li>
-                  <li class="list-group-item"><a href="javascript:void(0)"  data-target="Strategic-Planning">Strategic Planning</a></li>
+                  <li class="list-group-item"><a href="javascript:void(0)" onclick="goToPage('Real-Estate-Lead-Generation')" data-target="Real-Estate-Lead-Generation">Real Estate Lead Generation</a></li>
+                  <li class="list-group-item"><a href="javascript:void(0)" onclick="goToPage('Website-Development')" data-target="Website-Development">Website Development</a></li>
+                  <li class="list-group-item"><a href="javascript:void(0)"onclick="goToPage('Social-Media-Marketing')"  data-target="Social-Media-Marketing">Social Media Marketing</a></li>
+                  <li class="list-group-item"><a href="javascript:void(0)" onclick="goToPage('Strategic-Planning')" data-target="Strategic-Planning">Strategic Planning</a></li>
                 </ul>
               </div>
               <!-- <div class="menu-section">
@@ -422,7 +422,8 @@
       
         // Redirect to the homepage
        
-        window.location.href = ''; // Adjust key and value as needed
+        window.location.href = './'; // Relative to the current directory
+
       }
     </script>
   </body>

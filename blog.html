@@ -127,16 +127,16 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto rounded-pill" headerNav>
               <li class="nav-item px-3">
-                <a href="/" class="nav-link text-white f-12 active scroll-link" data-target="home">HOME</a>
+                <a href="javascript:void(0)" onclick="goToPage('home')" class="nav-link text-white f-12 active " data-target="home">HOME</a>
               </li>
               <li class="nav-item px-3">
-                <a href="javascript:void(0)" class="nav-link text-white f-12 scroll-link" data-target="about">ABOUT</a>
+                <a href="javascript:void(0)" onclick="goToPage('about')" class="nav-link text-white f-12 " data-target="about">ABOUT</a>
               </li>
               <li class="nav-item px-3">
-                <a href="javascript:void(0)" (onclick)="goToHome()" class="nav-link text-white f-12 scroll-link" data-target="services">SERVICES</a>
+                <a href="javascript:void(0)" onclick="goToPage('services')" class="nav-link text-white f-12 " data-target="services">SERVICES</a>
               </li>
               <li class="nav-item px-3">
-                <a href="javascript:void(0)" (onclick)="goService()" class="nav-link text-white f-12 scroll-link" data-target="contact">CONTACT</a>
+                <a href="javascript:void(0)" class="nav-link text-white f-12 " data-target="contact">CONTACT</a>
               </li>
             </ul>
             <button class="btn bg-warning rounded-pill f-12 mt-2 mt-md-0 invisible" type="button">TEMPLATE</button>
@@ -320,19 +320,19 @@
               <div class="menu-section">
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item text-warning title mb-1">Menu</li>
-                  <li class="list-group-item"><a href="javascript:void(0)" class="scroll-link" data-target="home">Home</a></li>
-                  <li class="list-group-item"><a href="javascript:void(0)" class="scroll-link" data-target="about">About</a></li>
-                  <li class="list-group-item"><a href="javascript:void(0)" class="scroll-link" data-target="services">Services</a></li>
-                  <li class="list-group-item"><a href="javascript:void(0)" class="scroll-link" data-target="contact">Contact</a></li>
+                  <li class="list-group-item"><a onclick="goToPage('home')"  data-target="home">Home </a></li>
+                  <li class="list-group-item"><a href="javascript:void(0)" onclick="goToPage('About')"  data-target="about">About</a></li>
+                  <li class="list-group-item"><a href="javascript:void(0)" onclick="goToPage('services')"  data-target="services">Services</a></li>
+                  <li class="list-group-item"><a href="javascript:void(0)"  data-target="contact">Contact</a></li>
                 </ul>
               </div>
               <div class="menu-section">
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item text-warning title mb-1">Services</li>
-                  <li class="list-group-item"><a href="javascript:void(0)" class="scroll-link" data-target="Real-Estate-Lead-Generation">Real Estate Lead Generation</a></li>
-                  <li class="list-group-item"><a href="javascript:void(0)" class="scroll-link" data-target="Website-Development">Website Development</a></li>
-                  <li class="list-group-item"><a href="javascript:void(0)" class="scroll-link" data-target="Social-Media-Marketing">Social Media Marketing</a></li>
-                  <li class="list-group-item"><a href="javascript:void(0)" class="scroll-link" data-target="Strategic-Planning">Strategic Planning</a></li>
+                  <li class="list-group-item"><a href="javascript:void(0)" onclick="goToPage('Real-Estate-Lead-Generation')" data-target="Real-Estate-Lead-Generation">Real Estate Lead Generation</a></li>
+                  <li class="list-group-item"><a href="javascript:void(0)" onclick="goToPage('Website-Development')" data-target="Website-Development">Website Development</a></li>
+                  <li class="list-group-item"><a href="javascript:void(0)"onclick="goToPage('Social-Media-Marketing')"  data-target="Social-Media-Marketing">Social Media Marketing</a></li>
+                  <li class="list-group-item"><a href="javascript:void(0)" onclick="goToPage('Strategic-Planning')" data-target="Strategic-Planning">Strategic Planning</a></li>
                 </ul>
               </div>
               <!-- <div class="menu-section">
@@ -411,5 +411,18 @@
 
     <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      function goToPage(value) {
+        // Set the local storage item
+        localStorage.setItem('redirectTo', value); // Adjust key and value as needed
+      
+        // Redirect to the homepage
+       
+        window.location.href = './'; // Relative to the current directory
+
+      }
+    </script>
   </body>
+
+  
 </html>
